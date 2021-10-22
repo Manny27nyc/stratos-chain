@@ -4,7 +4,7 @@
 
    A: No matter you use linux or Mac, the working folder is the folder that has the `stchaind` and `stchaincli` binary files.
 
-   **For Linux users**, you can make working directory(e.g., `testnet`) and directly download the pre-built binary files from
+   **For Linux users**, you can make a working directory(e.g., `testnet`) and directly download the pre-built binary files from
 
       ```bash
       mkdir testnet
@@ -27,9 +27,9 @@
       ```
       After `make build`, you will find the `stchaind` and `stchaincli` binary files in `testnet/stratos-chain/build`.
 
-     `build` is your working directory and you can do other operations inside this folder.
+     `build` is your working directory, and you can do other operations inside this folder.
 
-     After this step, your working directory looks like
+     After installation, your working directory looks like
      ```bash
      .
      ├── config
@@ -47,6 +47,8 @@
      ├── node_key.json
      └── priv_validator_key.json
      ```
+   In `config` folder:
+
    `addrbook.json` stores peer addresses.
 
    `app.toml` contains the default settings required for `app`.
@@ -80,12 +82,12 @@
    A: All `stratos-chain` commands need to be run in the **working directory**. First, check if you started node in the working directory; second, check your `config` folder if you already moved `genesis.json` and `config.toml` here. If this error is still there, re-download these two files, change `moniker` in `config.toml` file and move both of them into `config` folder.
 
 
-3. Q: Unknown address: account st1xxx does not exist?
+3. Q: Unknown address: account st1xxx... does not exist?
    
    A: This error happens when:
    * your node has not caught up with the current blockchain height, that is, the synchronization process has not finished yet.
    * your node has no or very small amount of tokens. Note that 1Stos=1000,000,000ustos.
-   * your command flag `--chain-id` is incorrect. The current `chain-id` is shown [on this page](https://big-dipper-test.thestratos.org/) right next to the search bar at the top of the page.
+   * the flag `--chain-id` in your command is incorrect. The current `chain-id` is shown [on this page](https://big-dipper-test.thestratos.org/) right next to the search bar at the top of the page.
 
 4. Q: How can I get test tokens and where?
    
