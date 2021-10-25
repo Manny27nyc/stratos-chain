@@ -38,7 +38,7 @@
      └── stchaind
      ```
      The `config` folder
-      ```bash
+     ```bash
      .
      ├── addrbook.json
      ├── app.toml
@@ -75,7 +75,7 @@
 
 1. Q: `ERROR: Dialing failed (attempts: 12): auth failure: secret conn failed: read tcp 192.168.23.128:49286->23.88.62.88:26656: i/o timeout module=pex addr=8571c63a215968708df92d4e753932a83fa7d1a9@23.88.62.88:26656`. How to resolve it?
 
-   A: Many participants reported this error. It happens when you start your node or during the node is running. Actually, this error message is not strange in p2p network and may be caused by the P2P address handling. You can find lots of information addressed this error online, such as [this]( https://github.com/tendermint/tendermint/issues/3716). Some people said, "I just had to leave it running a while longer, it started syncing after all the errors". We are working on it, trying to find a workaround. Currently, you can check your network connection with `curl localhost:26657/net_info | grep moniker`, which will show the node that you connect with. if you have some node connected, your node is fine.
+   A: Many participants reported this error. It happens when you start your node or while the node is running. Actually, this error message is not strange in a p2p network and may be caused by the P2P address handling. You can find lots of information addressing this error online, such as [this](https://github.com/tendermint/tendermint/issues/3716). Some people said, "I just had to leave it running a while longer, it started syncing after all the errors". We are working on it, trying to find a workaround. Currently, you can check your network connection with `curl localhost:26657/net_info | grep moniker`, which will show the node that you connect with. if you have some nodes connected, your node is fine.
 
 2. Q: Couldn't read `GenesisDoc`(or `config.toml`) file: no such file or directory?
    
